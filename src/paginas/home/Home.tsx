@@ -1,4 +1,4 @@
-import homeLogo from '../../assets/img/Minuto (1).png'
+import homeLogo from '../../assets/img/home.png'
 function Home() {
 
     return (
