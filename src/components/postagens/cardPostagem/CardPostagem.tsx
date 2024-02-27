@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Postagem from '../../../models/Postagem'
+import usuarioFoto from '../../assets/img/Foto-perfil.jpg'
 
 interface CardPostagemProps {
   post: Postagem
