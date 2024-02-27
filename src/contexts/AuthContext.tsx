@@ -1,64 +1,64 @@
-import { ReactNode, createContext, useState } from "react";
-import UsuarioLogin from "../models/UsuarioLogin";
-import { login } from "../services/Service";
+import { createContext, ReactNode, useState } from "react"
 
-interface AuthContextProps{
+import UsuarioLogin from "../models/UsuarioLogin"
+import { login } from "../services/Service"
+import { toastAlerta } from "../util/toastAlerta"
+// import { toastAlerta } from "../utils/toastAlerta"
+
+interface AuthContextProps {
     usuario: UsuarioLogin
     handleLogout(): void
     handleLogin(usuario: UsuarioLogin): Promise<void>
     isLoading: boolean
 }
 
-interface AuthProviderProps{
+interface AuthProviderProps {
     children: ReactNode
 }
 
 export const AuthContext = createContext({} as AuthContextProps)
 
-export function AuthProvider({children }: AuthProviderProps){
-    const[usuario, setUsuario] = useState<UsuarioLogin>({
+export function AuthProvider({ children }: AuthProviderProps) {
+
+    const [usuario, setUsuario] = useState<UsuarioLogin>({
         id: 0,
         nome: "",
-        senha: "",
         usuario: "",
+        senha: "",
         foto: "",
         token: ""
-
     })
 
-    const [isLoading, setIsLoading] = useState(false) 
-    
-    async function  handleLogin(userLogin: UsuarioLogin){
+    const [isLoading, setIsLoading] = useState(false)
+
+    async function handleLogin(userLogin: UsuarioLogin) {
         setIsLoading(true)
-        try{
+        try {
             await login(`/usuarios/logar`, userLogin, setUsuario)
-            alert("Usuario Logado com sucesso")
+            toastAlerta('Você precisa estar logado', 'info');
             setIsLoading(false)
 
-        }catch (erro){
-            console.log(erro)
-            alert("Não é possivel validar o seu usuario, verifique o seu e-mail e senha!")
+        } catch (error) {
+            console.log(error)
+            toastAlerta('Você precisa estar logado', 'info');
             setIsLoading(false)
-
         }
-
     }
-    function handleLogout(){
+
+    function handleLogout() {
         setUsuario({
             id: 0,
             nome: "",
-            senha: "",
             usuario: "",
+            senha: "",
             foto: "",
             token: ""
-    
         })
     }
 
-    return(
-        <AuthContext.Provider value={{usuario, handleLogin, handleLogout, isLoading}}>
+    return (
+        <AuthContext.Provider value={{ usuario, handleLogin, handleLogout, isLoading }}>
             {children}
-
         </AuthContext.Provider>
     )
 }
