@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { toastAlerta } from '../../util/toastAlerta'
+import './Navbar.css'
 
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
 
     if(usuario.token !== "") {
       navbarComponent = (
-        <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
+        <div className='w-full bg-blue-500 text-white flex justify-center py-4'>
           <div className="container flex justify-between text-lg">
             <Link to='/home' className='text-2xl font-bold uppercase'>Blog Pessoal</Link>
 
