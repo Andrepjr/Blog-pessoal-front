@@ -20,9 +20,9 @@ function Navbar() {
 
     if(usuario.token !== "") {
       navbarComponent = (
-        <div className='w-full bg-blue-500 text-white flex justify-center py-4'>
+        <div className='w-full  text-white flex justify-center py-4 bg-gradient-to-r from-blue-600 to-[#96caeb]'>
           <div className="container flex justify-between text-lg">
-            <Link to='/home' className='text-2xl font-bold uppercase'>Blog Pessoal</Link>
+            <Link to='/home' className='text-2xl font-bold uppercase'>Personal Blog</Link>
 
             <div className='flex gap-4'>
               <Link to='/postagens' className='hover:underline'>Postagens</Link>

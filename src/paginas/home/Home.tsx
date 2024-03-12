@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <>
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <div className='container grid grid-cols-2 blue-700'>
             <div className="flex flex-col gap-4 items-center justify-center py-4">
               <h2 className='text-5xl text-blue-600 font-bold'>Seja bem vindo!</h2>
@@ -18,7 +18,7 @@ function Home() {
   
               <div className="flex justify-around gap-4">
               <ModalPostagem />
-              <Link to="/postagens" className='rounded bg-blue-600 text-white py-2 px-4'>Ver postagens</Link>
+              <Link to="/postagens" className='rounded bg-blue-600 text-white py-2 px-4 '>Ver postagens</Link>
             </div>
             </div>
   
