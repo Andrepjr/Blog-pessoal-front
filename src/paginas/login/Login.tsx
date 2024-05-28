@@ -65,7 +65,7 @@ function login(e: ChangeEvent<HTMLFormElement>) {
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
-          <button  type='submit' className="rounded bg-blue-400 hover:bg-blue-600 text-white w-1/2 py-2 flex justify-center">
+          <button  type='submit' className="rounded bg-red-400 hover:bg-red-600 text-white w-1/2 py-2 flex justify-center">
            {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
