@@ -4,3 +4,12 @@ body{
     font-weight: 700;
     font-style: normal;
 }
+
+.text-custom-color {
+    color: #0f3f5d; 
+  }
+
+  .text-custom-color-1 {
+    color: white; 
+  }
+

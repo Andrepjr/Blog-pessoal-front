@@ -13,12 +13,12 @@ function Home() {
         <div className="flex justify-center ">
           <div className='container grid grid-cols-2 blue-700'>
             <div className="flex flex-col gap-4 items-center justify-center py-4">
-              <h2 className='text-5xl text-blue-600 font-bold'>Seja bem vindo!</h2>
-              <p className='text-xl text-blue-600'>Expresse aqui seus pensamentos e opniões</p>
+              <h2 className='text-5xl text-custom-color-h2 font-bold'>Seja bem vindo!</h2>
+              <p className='text-xl text-custom-color-p'>Expresse aqui seus pensamentos e opniões</p>
   
               <div className="flex justify-around gap-4">
               <ModalPostagem />
-              <Link to="/postagens" className='rounded bg-red-600 text-white py-2 px-4 '>Ver postagens</Link>
+              <Link to="/postagens" className='rounded bg-[#c91d34] hover:bg-[#d77c84] text-white py-2 px-4 '>Ver postagens</Link>
             </div>
             </div>
   

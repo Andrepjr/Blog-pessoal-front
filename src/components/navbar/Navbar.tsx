@@ -20,16 +20,16 @@ function Navbar() {
 
     if(usuario.token !== "") {
       navbarComponent = (
-        <div className='w-full  text-white flex justify-center py-4 bg-gradient-to-r from-blue-600 to-[#96caeb]'>
+        <div className='w-full  text-custom-color flex justify-center py-4 bg-gradient-to-r from-white to-[#1c4d6b]'>
           <div className="container flex justify-between text-lg">
-            <Link to='/home' className='text-2xl font-bold uppercase'>Personal Blog</Link>
+            <Link to='/home' className='text-2xl font-bold uppercase '>Rede Ancora Event Hub</Link>
 
             <div className='flex gap-4'>
-              <Link to='/postagens' className='hover:underline'>Postagens</Link>
-              <Link to='/temas' className='hover:underline'>Temas</Link>
-              <Link to='/cadastroTema' className='hover:underline'>Cadastrar tema</Link>
-              <Link to='/perfil' className='hover:underline'>Perfil</Link>
-              <Link to='' onClick={logout} className='hover:underline'>Sair</Link>
+              <Link to='/postagens' className='hover:underline text-custom-color-1'>Postagens</Link>
+              <Link to='/temas' className='hover:underline text-custom-color-1'>Temas</Link>
+              <Link to='/cadastroTema' className='hover:underline text-custom-color-1'>Cadastrar tema</Link>
+              <Link to='/perfil' className='hover:underline text-custom-color-1'>Perfil</Link>
+              <Link to='' onClick={logout} className='hover:underline text-custom-color-1'>Sair</Link>
             </div>
           </div>
         </div>
