@@ -25,7 +25,7 @@ function Navbar() {
             <Link to='/home' className='text-2xl font-bold uppercase '>Rede Ancora Event Hub</Link>
 
             <div className='flex gap-4'>
-              <Link to='/postagens' className='hover:underline text-custom-color-1'>Postagens</Link>
+              <Link to='/postagens' className='hover:underline text-custom-color-1'>Eventos</Link>
               <Link to='/temas' className='hover:underline text-custom-color-1'>Temas</Link>
               <Link to='/cadastroTema' className='hover:underline text-custom-color-1'>Cadastrar tema</Link>
               <Link to='/perfil' className='hover:underline text-custom-color-1'>Perfil</Link>
